@@ -185,6 +185,26 @@ header {
     font-style: italic;
 }
 
+.botoes{
+    display: flex;
+    gap: 15px;
+}
+
+.container-texto .btn-projetos{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--font-inter);
+    font-size: 14px;
+    color: var(--dark-brown);
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 5px;
+    width: 300px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .container-texto .btn{
     display: inline-block;
     text-decoration: none;
@@ -196,10 +216,12 @@ header {
     background: var(--contrast-color);
     padding: 15px;
     border-radius: 5px;
+    width: 300px;
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.container-texto .btn:hover{
+.container-texto .btn:hover,
+.container-texto .btn-projetos:hover{
     cursor: pointer;
     background: var(--dark-brown);
     transform: translateY(-5px);
