@@ -57,6 +57,7 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
+    gap: 500px;
 }
 
 .logo {
@@ -224,6 +225,7 @@ header {
 .container-texto .btn-projetos:hover{
     cursor: pointer;
     background: var(--dark-brown);
+    color: var(--light-brown);
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgb(0 0 0 / 20%);
 }
@@ -325,6 +327,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 50px;
 }
 
 .container-valores .valor h3{
@@ -338,4 +341,30 @@ header {
     font-size: 12px;
     width: 200px;
     color: var(--dark-brown);
+}
+
+.servicos{
+    background: var(--light-brown);
+}
+
+.container2{
+    padding: 90px;
+    margin-left: 300px;
+}
+
+.container2-texto{
+    margin-top: 100px;
+    align-items: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.container2-texto .titulo{
+    font-family: var(--font-playfair);
+    font-size: 90px;
+    font-weight: lighter;
+    line-height: 1;
+    color: var(--dark-brown);
+    margin-bottom: 30px;
 }
