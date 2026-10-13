@@ -454,13 +454,13 @@ header {
     margin-left: 30px;
     text-transform: uppercase;
     font-family: var(--font-inter);
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     letter-spacing: 2;
     background: #FDFBFA;
     color: #935E3D;
-    padding: 15px;
-    width: 150px;
+    padding: 10px;
+    width: 100px;
     text-align: center;
 }
 
