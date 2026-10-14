@@ -22,6 +22,7 @@
                     <li><a href="#sobre">Sobre Nós</a></li>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#projetos">Projetos</a></li>
+                    <li> <a href="#contato"> Contato </a></li>
                 </ul>
             </nav>
         </div>
@@ -177,11 +178,47 @@
                         <option value="projeto2"> Reserva do Sol </option>
                     </select>
 
-                    <button class="btn-enviar" type="submit" onclick="mostrarMensagem()">Enviar</button>
+                    <button class="btn-enviar" type="submit" id="enviar" onclick="mostrarMensagem()">Enviar</button>
                 </form>
             </div>
-
         </section>
     </main>
+
+    <footer>
+        <div class="container-footer-logo">
+            <div class="footer-logo">
+                <img src="./image/sunrise.png" alt="Icone de um pôr do sol">
+                <div>
+                    <h2> Aurora</h2>
+                    <p> Contrutora</p>
+                </div>
+            </div>
+            <p class="descricao"> © 2026 Aurora Construtora. Todos os direitos reservados. </p>
+        </div>
+
+
+        <div class="footer-links">
+            <nav>
+                <ul>
+                    <li> <a href="#sobre"> Sobre nós </a></li>
+                    <li> <a href="#servicos"> Serviços </a></li>
+                    <li> <a href="#projetos"> Projetos </a></li>
+                    <li> <a href="#"> Instagram ↗</a></li>
+                    <li> <a href="#"> Linkedln ↗</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        var enviar = document.getElementById('enviar');
+        enviar.addEventListener('click', mostrarMensagem); 
+
+        function mostrarMensagem(){
+            enviar.innerHTML = 'Sua mensagem foi enviada! Aguarde o retorno.';
+            enviar.style.color = '#C87D55';
+            enviar.style.background = '#2B211B';
+        }
+    </script>
 </body>
 </html>
