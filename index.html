@@ -120,28 +120,67 @@
 
             <div class="container-projetos">
                     <article class="projeto">
-                        <img src="https://images.unsplash.com/photo-1759671953272-a4719ca32266?w=1200&q=85&auto=format&fit=crop" alt="Foto do prédio de condomínios">
+                        <img src="https://images.unsplash.com/photo-1759671953272-a4719ca32266?w=1200&q=85&auto=format&fit=crop" alt="Foto do prédio de condomínios" loading="lazy">
                         <small> em obras </small>
                         <div class="projeto-infos">
-                            <h1> Piracicaba - SP </h1>
-                            <h2> Jardins do Horizontes </h2>
-                            <p> Área: 180 a 240 m² </p>
-                            <p> Quartos: 3 a 4 suítes </p>
-                            <button> <a href="#"> Saiba mais <span> ↗ </span></a> </button>
+                            <h1> Jardins do Horizontes </h1>
+                            <h2> Parque Jardim Jupiá, Piracicaba - SP </h2>
+                            <div class="projeto-metricas">
+                                <p> <span> Área: </span> 180 a 240 m² </p>
+                                <p> <span> Quartos: </span> 3 a 4 suítes </p>
+                                <p> <span> Garagem:</span> 1 veículo</p>
+                            </div>
+                            <button class="btn-saiba-mais"> <a href="#"> Saiba mais <span> ↗ </span></a> </button>
                         </div>
                     </article>
                     <article class="projeto">
                         <img src="https://images.unsplash.com/photo-1759355787121-eaef014a501d?w=1200&q=85&auto=format&fit=crop" alt="Foto da casa de condomínios">
                         <small> lançamento </small>
                         <div class="projeto-infos">
-                            <h1> Campinas - SP </h1>
-                            <h2> Reserva do Sol </h2>
-                            <p> Área: 220 a 310 m² </p>
-                            <p> Quartos: 3 a 4 suítes </p>
-                            <button> <a href="#"> Saiba mais <span> ↗ </span></a> </button>
+                            <h1> Reserva do Sol </h1>
+                            <h2> Água Branca, Piracicaba - SP </h2>
+                            <div class="projeto-metricas">
+                                <p> <span> Área: </span> 220 a 310 m² </p>
+                                <p> <span> Quartos: </span> 3 a 4 suítes </p>
+                                <p> <span> Garagem: </span> 2 veículos </p>
+                            </div>
+                            <button class="btn-saiba-mais"> <a href="#"> Saiba mais <span> ↗ </span></a> </button>
                         </div>
                     </article>
                 </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <div class="container-texto4">
+                <small> 04 / Fale conosco </small>
+                <h1> Seu novo começo está a uma <span><i>conversa.</i></span></h1>
+                <p> Conte o que você procura. Nossa equipe está pronta para ajudar a transformar planos em realidade. </p>
+                <p> <span> 01 </span> Rua das Figueiras, 452 - Jardim Primavera - Piracicaba - SP</p>
+                <p> <span> 02 </span> contato@auroraconstrutora.com.br </p>
+            </div>
+
+            <div class="container-form">
+                <div class="texto">
+                    <h2> Deixe sua mensagem </h2>
+                    <p> Preencha os dados e prepare seu e-mail para nossa equipe entrar em contato.</p>
+                </div>
+                <form action="/salvar" method="post">
+                    <input type="text" placeholder="Nome completo" id="nome" name="nome" autocomplete="nome" required>
+
+                    <input type="email" placeholder="E-mail" id="email" name="email" autocomplete="email" required>
+
+                    <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="Telefone" pattern="^\(\d{2}\)\s?\d{5}-\d{4}$" required >
+
+                    <input list="projetos" id="projetos" name="projetos" placeholder="Projeto de Interesse">
+                    <datalist id="projetos">
+                        <option value="Jardins do Horizonte">
+                        <option value="Reserva do Sol">
+                    </datalist>
+
+                    <button class="btn-enviar" type="submit" onclick="mostrarMensagem()">Enviar</button>
+                </form>
+            </div>
+
         </section>
     </main>
 </body>
