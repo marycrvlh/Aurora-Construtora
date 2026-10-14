@@ -171,11 +171,11 @@
 
                     <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="Telefone" pattern="^\(\d{2}\)\s?\d{5}-\d{4}$" required >
 
-                    <input list="projetos" id="projetos" name="projetos" placeholder="Projeto de Interesse">
-                    <datalist id="projetos">
-                        <option value="Jardins do Horizonte">
-                        <option value="Reserva do Sol">
-                    </datalist>
+                    <select id="projetos">
+                        <option value=""> Projeto de interesse </option>
+                        <option value="projeto1"> Jardins do Horizonte </option>
+                        <option value="projeto2"> Reserva do Sol </option>
+                    </select>
 
                     <button class="btn-enviar" type="submit" onclick="mostrarMensagem()">Enviar</button>
                 </form>
