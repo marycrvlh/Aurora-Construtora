@@ -11,6 +11,8 @@
     <title>Jardins do Horizontes | Aurora Construtora </title>
 </head>
 <body>
+
+    <!-- cabeçalho da página -->
     <header>
         <div class="container">
             <div class="logo">
@@ -24,6 +26,73 @@
             </nav>
         </div>
     </header>
+
+    <main>
+
+        <!-- titulo destaque de apresentação -->
+        <section class="section01">
+            <div class="container-texto">
+                <small>em obras</small>
+                <h1>Jardins do Horizontes</h1>
+                <p>Parque Jardim Jupiá, Piracicaba - SP</p>
+            </div>
+
+            <!-- galeria de fotos -->
+            <figure class="projeto-fotos">
+                <div class="principal">
+                    <img src="https://images.unsplash.com/photo-1759671953272-a4719ca32266?w=1200&q=85&auto=format&fit=crop" alt="fachada do empreendimento" id="imagem-principal">
+                </div>
+
+                <div class="miniaturas">
+                    <img src="./image/sala-estar01.jpg" alt=" Sala de estar" class="miniatura ativa">
+                    <img src="./image/cozinha01.jpg" alt="Cozinha" class="miniatura">
+                    <img src="./image/quarto01.jpg" alt="Quarto de leito" class="miniatura">
+                    <img src="./image/banheiro01.jpg" alt="Banheiro" class="miniatura">
+                </div>
+            </figure>
+        </section>
+
+        <section class="section02">
+            <div class="container-texto02">
+                <small>sobre o projeto</small>
+                <h1>Apartamentos contemporâneos em condomínio fechado, cercadas por áreas verdes e lazer completo.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore illum sint in ullam ex harum? Aspernatur officia praesentium modi iste itaque dignissimos voluptatibus voluptate optio unde porro molestiae commodi totam a neque, ut quia laborum corrupti facere cupiditate soluta magni?</p>
+            </div>
+
+            <article class="infos">
+                <div class="diferencias">
+                    <h2>Diferencias</h2>
+                    <ul>
+                        <li>Clube com piscina aquecida;</li>
+                        <li>Espaço gourmet</li>
+                        <li>Pet Place</li>
+                        <li>Quadra de tênis e beach tênis</li>
+                        <li>Segurança 24hrs</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+    </main>
     
+    <script>
+        const imagemPrincipal = document.getElementById('imagem-principal');
+        const miniaturas = document.querySelectorAll('.miniatura');
+
+        miniaturas.forEach(function (miniatura) {
+
+        miniatura.addEventListener('click', function () {
+            imagemPrincipal.src = miniatura.src;
+            imagemPrincipal.alt = miniatura.alt;
+
+            miniaturas.forEach(function (m) {
+            m.classList.remove('ativa');
+            });
+
+            miniatura.classList.add('ativa');
+        });
+
+        });
+    </script>
 </body>
 </html>
