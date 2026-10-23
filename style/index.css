@@ -518,6 +518,7 @@ header {
     width: 400px;
     border: 1px solid var(--contrast-color);
     background: #fffbf9;
+    color: var(--contrast-color);
     font-family: var(--font-inter);
     font-size: 18px;
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -536,6 +537,7 @@ header {
     transform: translateY(-8px);
     background: var(--contrast-color);
     box-shadow: 0 6px 14px rgba(219, 158, 112, 0.3);
+    color: var(--light-brown);
 }
 
 /* ==== Seção: Contato ==== */

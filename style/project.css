@@ -1,0 +1,115 @@
+:root{
+    --bg-color: #FFFFFF;
+    --light-brown: #F5F0EB;
+    --contrast-color: #C87D55;
+    --dark-brown: #2B211B;
+    --gray-color: #E0DCD7;
+    --font-playfair: 'Playfair Display', Georgia, sans-serif;
+    --font-inter: 'Inter', Arial, sans-serif;
+}
+
+/* === Reset === */
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg-color);
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a{
+    text-decoration: none;
+    color: var(--light-brown);
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px;
+    border-bottom: 1px solid var(--gray-color);
+    background-color: var(--bg-color);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 500px;
+}
+
+.logo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+    line-height: 0.6;
+}
+
+.titulo-logo {
+    font-family: var(--font-playfair);
+    font-size: 27px;
+}
+
+.construtora {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    font-family: var(--font-inter);
+}
+
+.logo img {
+    height: 50px;
+    filter: brightness(0) saturate(100%) invert(58%) sepia(21%) saturate(1915%) hue-rotate(338deg) brightness(91%) contrast(87%);
+}
+
+.container nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.container nav ul li a {
+    color: var(--dark-brown);
+    font-family: var(--font-inter);
+    font-size: 16px;
+    transition: color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease, background 0.3s ease;
+    border: 1px solid var(--gray-color);
+    padding: 10px;
+    border-radius: 100px;
+    background: #f2ede7;
+}
+
+.container nav ul li a:hover {
+    background: var(--light-brown);
+    color: var(--contrast-color);
+    box-shadow: 0 4px 10px rgba(248, 179, 127, 0.525);
+    padding: 15px;
+}

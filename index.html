@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../style/index.css">
-    <title>Aurora Construtora</title>
+    <link rel="shortcut icon" href="./image/sunset.png" type="image/x-icon">
+    <title>Início | Aurora Construtora</title>
 </head>
 <body>
     <header>
@@ -131,9 +132,10 @@
                                 <p> <span> Quartos: </span> 3 a 4 suítes </p>
                                 <p> <span> Garagem:</span> 1 veículo</p>
                             </div>
-                            <button class="btn-saiba-mais"> <a href="#"> Saiba mais <span> ↗ </span></a> </button>
+                            <a href="./project01.html"> <button class="btn-saiba-mais"> Saiba mais <span> ↗ </span> </button> </a>
                         </div>
                     </article>
+
                     <article class="projeto">
                         <img src="https://images.unsplash.com/photo-1759355787121-eaef014a501d?w=1200&q=85&auto=format&fit=crop" alt="Foto da casa de condomínios">
                         <small> lançamento </small>
@@ -145,7 +147,7 @@
                                 <p> <span> Quartos: </span> 3 a 4 suítes </p>
                                 <p> <span> Garagem: </span> 2 veículos </p>
                             </div>
-                            <button class="btn-saiba-mais"> <a href="#"> Saiba mais <span> ↗ </span></a> </button>
+                            <a href="./project02.html"> <button class="btn-saiba-mais"> Saiba mais <span> ↗ </span> </button> </a>
                         </div>
                     </article>
                 </div>
@@ -165,7 +167,7 @@
                     <h2> Deixe sua mensagem </h2>
                     <p> Preencha os dados e prepare seu e-mail para nossa equipe entrar em contato.</p>
                 </div>
-                <form action="/salvar" method="post">
+                <form action="/salvar" method="post" id="formulario" onsubmit="return false;">
                     <input type="text" placeholder="Nome completo" id="nome" name="nome" autocomplete="nome" required>
 
                     <input type="email" placeholder="E-mail" id="email" name="email" autocomplete="email" required>
@@ -212,13 +214,16 @@
 
     <script>
         var enviar = document.getElementById('enviar');
-        enviar.addEventListener('click', mostrarMensagem); 
+        var formulario = document.getElementById('formulario')
 
-        function mostrarMensagem(){
+        formulario.addEventListener('submit', function(event){
+            event.preventDefault();
+
             enviar.innerHTML = 'Sua mensagem foi enviada! Aguarde o retorno.';
             enviar.style.color = '#C87D55';
             enviar.style.background = '#2B211B';
-        }
+            enviar.style.boxShadow = '0 6px 14px rgba(219, 158, 112, 0.525)'
+        });
     </script>
 </body>
 </html>
