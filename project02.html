@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style/project.css">
     <link rel="shortcut icon" href="./image/sunset.png" type="image/x-icon">
     <title>Reserva do Sol | Aurora Construtora </title>
@@ -16,7 +16,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="../image/sunrise.png" alt="Logo da Aurora Construtora" />
+                <img src="./image/sunrise.png" alt="Logo da Aurora Construtora" />
                 <h2 class="titulo-logo"> Aurora <br> <span class="construtora"> Construtora </span></h2>
             </div>
             <nav>
@@ -44,8 +44,8 @@
                 </div>
 
                 <div class="miniaturas">
-                    <img src="https://images.unsplash.com/photo-1759355787121-eaef014a501d?w=1200&q=85&auto=format&fit=crop" alt="fachada do empreendimento" id="imagem-principal" class="miniatura">
-                    <img src="./image/sala-estar02.png" alt=" Sala de estar" class="miniatura ativa">
+                    <img src="https://images.unsplash.com/photo-1759355787121-eaef014a501d?w=1200&q=85&auto=format&fit=crop" alt="fachada do empreendimento" class="miniatura ativa">
+                    <img src="./image/sala-estar02.png" alt=" Sala de estar" class="miniatura">
                     <img src="./image/cozinha02.png" alt="Cozinha" class="miniatura">
                     <img src="./image/quarto02.png" alt="Quarto de leito" class="miniatura">
                     <img src="./image/banheiro02.png" alt="Banheiro" class="miniatura">
@@ -131,19 +131,19 @@
                     <p> Preencha os dados e prepare seu e-mail para nossa equipe entrar em contato.</p>
                 </div>
                 <form action="/salvar" method="post" id="formulario" onsubmit="return false;">
-                    <input type="text" placeholder="Nome completo" id="nome" name="nome" autocomplete="nome" required>
+                    <input type="text" placeholder="Nome completo" id="nome" name="nome" autocomplete="name" required>
 
                     <input type="email" placeholder="E-mail" id="email" name="email" autocomplete="email" required>
 
                     <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="Telefone" pattern="^\(\d{2}\)\s?\d{5}-\d{4}$" required >
 
-                    <select id="projetos">
+                    <select id="projeto-interesse" name="projeto">
                         <option value=""> Projeto de interesse </option>
                         <option value="projeto1"> Jardins do Horizonte </option>
                         <option value="projeto2"> Reserva do Sol </option>
                     </select>
 
-                    <button class="btn-enviar" type="submit" id="enviar" onclick="mostrarMensagem()">Enviar</button>
+                    <button class="btn-enviar" type="submit" id="enviar">Enviar</button>
                 </form>
             </div>
         </section>

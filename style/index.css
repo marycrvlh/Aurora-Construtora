@@ -1,4 +1,3 @@
-
 :root{
     --bg-color: #FFFFFF;
     --light-brown: #F5F0EB;
@@ -58,12 +57,12 @@ header {
 
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
-    gap: 500px;
+    gap: 40px;
 }
 
 .logo {
@@ -449,9 +448,9 @@ header {
 }
 
 .projeto small{
-    position: relative;
-    bottom: 57%;
-    margin-left: 30px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
     text-transform: uppercase;
     font-family: var(--font-inter);
     font-size: 12px;
@@ -471,8 +470,6 @@ header {
 }
 
 .projeto-infos{
-    position: relative;
-    bottom: 45px;
     padding: 20px;
     line-height: 1.5;
 }
@@ -739,4 +736,334 @@ footer{
 
 .footer-links nav ul li a:hover {
     color: var(--contrast-color);
+}
+
+/* === Responsivo: Notebook === */
+
+@media (max-width: 1500px) {
+    html{
+        scroll-padding-top: 100px;
+    }
+
+    .contato,
+    footer{
+        max-height: none;
+    }
+
+    .container-texto4 h1{
+        width: 100%;
+        max-width: 500px;
+        font-size: clamp(40px, 5vw, 70px);
+    }
+
+    .container-texto4 p{
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .container-form{
+        width: 100%;
+        max-width: 650px;
+    }
+
+    footer{
+        gap: 20px;
+    }
+
+    .footer-links nav ul{
+        flex-wrap: wrap;
+        gap: 15px 30px;
+    }
+
+    .hero,
+    .sobre,
+    .servicos,
+    .projetos{
+        max-height: none;
+    }
+
+    .container-texto h1{
+        font-size: clamp(40px, 5.5vw, 90px);
+    }
+
+    .container-texto p{
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .container-bnts .btn-contato,
+    .container-bnts .btn-projetos{
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .container-card{
+        width: 100%;
+        max-width: 800px;
+        margin-left: 0;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    .container-card .card{
+        flex: 1;
+    }
+
+    .container-valores{
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .container-texto1 h1,
+    .container-texto2 h1,
+    .container-texto3 h1{
+        font-size: clamp(36px, 5vw, 70px);
+    }
+
+    .container-texto1 p{
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .servico{
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .servico p{
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .container-projetos{
+        margin: 60px 20px;
+    }
+
+    .projeto-metricas{
+        flex-wrap: wrap;
+        gap: 10px 40px;
+    }
+
+    .btn-saiba-mais{
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* === Responsivo: Tablet === */
+
+@media (max-width: 1200px) {
+    .hero,
+    .sobre{
+        grid-template-columns: 1fr;
+    }
+
+    .container-conteudo{
+        margin: 20px 0 40px;
+    }
+
+    .container-valores{
+        margin: 0 auto 40px;
+    }
+
+    .container-texto1,
+    .container-texto2,
+    .container-texto3{
+        margin: 20px 0;
+    }
+
+    .container-servicos{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .container-projetos{
+        flex-direction: column;
+        margin: 40px 0;
+    }
+
+    .contato,
+    footer{
+        grid-template-columns: 1fr;
+    }
+
+    .container-texto4{
+        margin: 20px 0;
+    }
+
+    .container-form{
+        margin: 20px 0;
+    }
+
+    footer{
+        gap: 30px;
+    }
+}
+
+/* === Responsivo: Cabeçalho === */
+
+@media (max-width: 900px) {
+    header{
+        position: sticky;
+        padding: 5px;
+    }
+
+    html{
+        scroll-padding-top: 130px;
+    }
+
+    .container{
+        flex-direction: column;
+        gap: 10px;
+        padding: 5px 10px;
+    }
+
+    .logo img{
+        height: 40px;
+    }
+
+    .titulo-logo{
+        font-size: 22px;
+    }
+
+    .container nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+    }
+
+    .container nav ul li a{
+        font-size: 14px;
+    }
+}
+
+/* === Responsivo: Celular === */
+
+@media (max-width: 700px) {
+    .hero,
+    .sobre,
+    .servicos,
+    .projetos{
+        padding: 40px 20px;
+    }
+
+    .container-texto h1,
+    .container-texto1 h1,
+    .container-texto2 h1,
+    .container-texto3 h1{
+        margin-top: 30px;
+    }
+
+    .container-texto p,
+    .container-texto1 p{
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .container-bnts{
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 40px;
+    }
+
+    .container-bnts .btn-contato,
+    .container-bnts .btn-projetos{
+        max-width: none;
+    }
+
+    .container-card{
+        padding: 10px;
+        bottom: 20px;
+    }
+
+    .container-card .card{
+        padding: 5px;
+    }
+
+    .container-card .card h2{
+        font-size: 20px;
+    }
+
+    .container-card .card p{
+        font-size: 13px;
+    }
+
+    .servico{
+        padding: 25px;
+    }
+
+    .servico h1{
+        font-size: 32px;
+    }
+
+    .projeto img{
+        height: 260px;
+    }
+
+    .projeto small{
+        top: 15px;
+        left: 15px;
+    }
+
+    .projeto-infos h1{
+        font-size: 28px;
+    }
+
+    .projeto-infos h2{
+        font-size: 12px;
+    }
+
+    .projeto-metricas{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .btn-saiba-mais{
+        max-width: none;
+        margin-top: 30px;
+    }
+
+    .contato,
+    footer{
+        padding: 40px 20px;
+    }
+
+    .container-texto4 h1{
+        margin-top: 30px;
+    }
+
+    .container-texto4 p{
+        font-size: 16px;
+        margin-top: 25px;
+    }
+
+    .container-form{
+        padding: 15px;
+    }
+
+    .container-form .texto{
+        margin-bottom: 25px;
+    }
+
+    .container-form form{
+        gap: 25px;
+    }
+
+    .btn-enviar{
+        font-size: 16px;
+    }
+
+    .container-footer-logo .descricao{
+        width: 100%;
+    }
+
+    .footer-logo img{
+        height: 50px;
+    }
+
+    .footer-links nav ul{
+        gap: 15px 20px;
+    }
 }
