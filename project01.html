@@ -21,7 +21,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="./index.html"> Voltar para a página principal </a></li>
+                    <li><a href="./index.html#projetos"> Voltar para a página principal </a></li>
                 </ul>
             </nav>
         </div>
@@ -44,6 +44,7 @@
                 </div>
 
                 <div class="miniaturas">
+                    <img src="https://images.unsplash.com/photo-1759671953272-a4719ca32266?w=1200&q=85&auto=format&fit=crop" alt="fachada do empreendimento" id="imagem-principal" class="miniatura">
                     <img src="./image/sala-estar01.jpg" alt=" Sala de estar" class="miniatura ativa">
                     <img src="./image/cozinha01.jpg" alt="Cozinha" class="miniatura">
                     <img src="./image/quarto01.jpg" alt="Quarto de leito" class="miniatura">
@@ -53,28 +54,126 @@
         </section>
 
         <section class="section02">
-            <div class="container-texto02">
-                <small>sobre o projeto</small>
-                <h1>Apartamentos contemporâneos em condomínio fechado, cercadas por áreas verdes e lazer completo.</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore illum sint in ullam ex harum? Aspernatur officia praesentium modi iste itaque dignissimos voluptatibus voluptate optio unde porro molestiae commodi totam a neque, ut quia laborum corrupti facere cupiditate soluta magni?</p>
+            <div>
+                <div class="container-texto02">
+                    <small>sobre o projeto</small>
+                    <h1>Apartamentos contemporâneos em condomínio fechado, cercadas por áreas verdes e lazer completo.</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore illum sint in ullam ex harum? Aspernatur officia praesentium modi iste itaque dignissimos voluptatibus voluptate optio unde porro molestiae commodi totam a neque, ut quia laborum corrupti facere cupiditate soluta magni?</p>
+                </div>
+    
+                <div class="infos">
+                    <div class="diferencias">
+                        <h2>Diferencias</h2>
+                        <ul class="diferenciais-grid">
+                            <li>Clube com piscina aquecida;</li>
+                            <li>Espaço gourmet</li>
+                            <li>Pet Place</li>
+                            <li>Quadra de tênis e beach tênis</li>
+                            <li> Acadêmia para musculação</li>
+                            <li>Segurança 24hrs</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <article class="infos">
-                <div class="diferencias">
-                    <h2>Diferencias</h2>
-                    <ul>
-                        <li>Clube com piscina aquecida;</li>
-                        <li>Espaço gourmet</li>
-                        <li>Pet Place</li>
-                        <li>Quadra de tênis e beach tênis</li>
-                        <li>Segurança 24hrs</li>
-                    </ul>
+            <div class="detalhes">
+                <div class="linha">
+                    <span class="rotulo">Status</span>
+                    <span class="valor">Em Obras</span>
                 </div>
-            </article>
+
+                <div class="linha">
+                    <span class="rotulo">Metragrem</span>
+                    <span class="valor">180 a 240m²</span>
+                </div>
+
+                <div class="linha">
+                    <span class="rotulo">Quartos</span>
+                    <span class="valor">3 a 4 Suites</span>
+                </div>
+
+                <div class="linha">
+                    <span class="rotulo">Garagem</span>
+                    <span class="valor">1 veículo</span>
+                </div>
+
+                <div class="linha">
+                    <span class="rotulo">Local</span>
+                    <span class="valor">Parque Jardim Jupiá, Piracicaba - SP</span>
+                </div>
+
+                <a href="#contato" class="btn-contato">Contatar um corretor</a>
+            </div>
         </section>
 
+        <section class="section03">
+            <div class="titulo">
+                <p> vídeo de apresentação </p>
+                <h2> Conheça o interior do Jardins do Horizontes </h2>
+            </div>
+
+            <div class="container-youtube">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/oFZFv1bSfmU?si=_hnhVoPyfz5fau39" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="contato" id="contato">
+            <div class="container-texto4">
+                <h1> Seu novo começo está a uma <span><i>conversa.</i></span></h1>
+                <p> Conte o que você procura. Nossa equipe está pronta para ajudar a transformar planos em realidade. </p>
+                <p> <span> 01 </span> Rua das Figueiras, 452 - Jardim Primavera - Piracicaba - SP</p>
+                <p> <span> 02 </span> contato@auroraconstrutora.com.br </p>
+            </div>
+
+            <div class="container-form">
+                <div class="texto">
+                    <h2> Deixe sua mensagem </h2>
+                    <p> Preencha os dados e prepare seu e-mail para nossa equipe entrar em contato.</p>
+                </div>
+                <form action="/salvar" method="post" id="formulario" onsubmit="return false;">
+                    <input type="text" placeholder="Nome completo" id="nome" name="nome" autocomplete="nome" required>
+
+                    <input type="email" placeholder="E-mail" id="email" name="email" autocomplete="email" required>
+
+                    <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="Telefone" pattern="^\(\d{2}\)\s?\d{5}-\d{4}$" required >
+
+                    <select id="projetos">
+                        <option value=""> Projeto de interesse </option>
+                        <option value="projeto1"> Jardins do Horizonte </option>
+                        <option value="projeto2"> Reserva do Sol </option>
+                    </select>
+
+                    <button class="btn-enviar" type="submit" id="enviar" onclick="mostrarMensagem()">Enviar</button>
+                </form>
+            </div>
+        </section>
     </main>
-    
+
+    <footer>
+        <div class="container-footer-logo">
+            <div class="footer-logo">
+                <img src="./image/sunrise.png" alt="Icone de um pôr do sol">
+                <div>
+                    <h2> Aurora</h2>
+                    <p> Contrutora</p>
+                </div>
+            </div>
+            <p class="descricao"> © 2026 Aurora Construtora. Todos os direitos reservados. </p>
+        </div>
+
+
+        <div class="footer-links">
+            <nav>
+                <ul>
+                    <li> <a href="./index.html#sobre"> Sobre nós </a></li>
+                    <li> <a href="./index.html#servicos"> Serviços </a></li>
+                    <li> <a href="./index.html#projetos"> Projetos </a></li>
+                    <li> <a href="#"> Instagram ↗</a></li>
+                    <li> <a href="#"> Linkedln ↗</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
     <script>
         const imagemPrincipal = document.getElementById('imagem-principal');
         const miniaturas = document.querySelectorAll('.miniatura');
@@ -92,6 +191,18 @@
             miniatura.classList.add('ativa');
         });
 
+        });
+
+        var enviar = document.getElementById('enviar');
+        var formulario = document.getElementById('formulario')
+
+        formulario.addEventListener('submit', function(event){
+            event.preventDefault();
+
+            enviar.innerHTML = 'Sua mensagem foi enviada! Aguarde o retorno.';
+            enviar.style.color = '#C87D55';
+            enviar.style.background = '#2B211B';
+            enviar.style.boxShadow = '0 6px 14px rgba(219, 158, 112, 0.525)'
         });
     </script>
 </body>
