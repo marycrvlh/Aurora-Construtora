@@ -570,92 +570,80 @@ footer{
     color: var(--contrast-color);
 }
 
-/* === Responsivo: Notebook === */
+/* === Responsivo: Notebook  === */
+@media (max-width: 1440px) {
+  html {
+    scroll-padding-top: 80px;
+  }
 
-@media (max-width: 1500px) {
-    html{
-        scroll-padding-top: 100px;
-    }
 
-    .contato,
-    footer{
-        max-height: none;
-    }
+  .section01, .section02, .detalhes, .contato, footer {
+    max-height: none;
+    height: auto;
+  }
 
-    .container-texto4 h1{
-        width: 100%;
-        max-width: 500px;
-        font-size: clamp(40px, 5vw, 70px);
-    }
 
-    .container-texto4 p{
-        width: 100%;
-        max-width: 450px;
-    }
+  .container-texto, .projeto-fotos {
+    margin-left: 6%; 
+    margin-right: 6%;
+  }
 
-    .container-form{
-        width: 100%;
-        max-width: 650px;
-    }
+  .container-texto h1 {
+    font-size: clamp(36px, 5vw, 55px); 
+  }
 
-    footer{
-        gap: 20px;
-    }
 
-    .footer-links nav ul{
-        flex-wrap: wrap;
-        gap: 15px 30px;
-    }
+  .section02 {
+    margin: 40px 6%;
+    grid-template-columns: 1fr 350px; 
+    gap: 30px;
+  }
 
-    .section01,
-    .section02{
-        max-height: none;
-    }
+  .container-texto02 h1 {
+    max-width: 100%;
+    font-size: clamp(26px, 3vw, 42px);
+  }
 
-    .section03{
-        height: auto;
-        padding: 20px 0 50px;
-    }
+  .container-texto02 p {
+    max-width: 100%;
+    font-size: 15px;
+  }
 
-    .container-texto,
-    .projeto-fotos{
-        margin-left: 8%;
-        margin-right: 8%;
-    }
+  .diferenciais-grid li {
+    font-size: 15px;
+  }
 
-    .container-texto h1{
-        font-size: clamp(40px, 6vw, 70px);
-    }
 
-    .section02{
-        margin: 20px 5%;
-        grid-template-columns: minmax(0, 1fr) 400px;
-        gap: 40px;
-    }
+  .section03 {
+    height: auto;
+    padding: 40px 0;
+  }
 
-    .container-texto02 h1{
-        width: 100%;
-        max-width: 870px;
-        font-size: clamp(28px, 3.2vw, 50px);
-    }
 
-    .container-texto02 p{
-        width: 100%;
-        max-width: 800px;
-    }
+  .container-texto4 h1 {
+    max-width: 450px;
+    font-size: clamp(36px, 4.5vw, 55px);
+  }
 
-    .diferenciais-grid li{
-        font-size: 16px;
-    }
+  .container-texto4 p {
+    max-width: 400px;
+    font-size: 15px;
+  }
 
-    .detalhes{
-        margin: 40px 0;
-        max-height: none;
-    }
+  .container-form {
+    max-width: 550px;
+  }
 
-    .titulo h2{
-        font-size: clamp(24px, 4vw, 40px);
-    }
+ 
+  footer {
+    gap: 15px;
+    padding: 30px 6%;
+  }
+
+  .footer-links nav ul {
+    flex-wrap: wrap;
+    gap: 10px 20px;
+  }
 }
 
 /* === Responsivo: Tablet === */
